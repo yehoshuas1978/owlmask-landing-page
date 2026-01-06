@@ -5,7 +5,7 @@
 ✅ Domains are added to your Vercel project  
 ⚠️ DNS records need to be updated  
 
-## The Problem
+## The Problem!
 
 Your domains show **"DNS Change Recommended"** because the DNS records aren't pointing to Vercel correctly yet.
 

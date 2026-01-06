@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     default: "OwlTable - The Capable Database Management Tool & SQL Client",
     template: "%s | OwlTable"
   },
-  description: "A powerful, ergonomic database management tool and SQL client designed for performance and developer productivity. Manage your data with ease.",
+  description: "A powerful, ergonomic database management tool and SQL client designed for performance and developer productivity. Manage Your Data with Ease.",
   keywords: ["OwlTable", "Owl Table", "owl-table", "Database Management", "SQL Client", "Postgres", "MySQL", "Database Tool"],
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "OwlTable - The Capable Database Management Tool",
-    description: "Manage your data with ease. A powerful SQL client for modern developers.",
+    description: "Manage Your Data with Ease. A powerful SQL client for modern developers.",
     url: 'https://www.owltable.net',
     siteName: 'OwlTable',
     locale: 'en_US',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: "OwlTable",
-    description: "Manage your data with ease. The capable database management tool.",
+    description: "Manage Your Data with Ease. The capable database management tool.",
   },
   verification: {
     google: 'RtbKq0_ovAEwfOmovJpnTFTP_m_dgz7eEAgsFdlKVy8',

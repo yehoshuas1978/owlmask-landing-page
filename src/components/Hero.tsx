@@ -26,7 +26,7 @@ export default function Hero() {
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
-                            Manage your data with ease
+                            Manage Your Data with Ease
                         </span>
                     </h1>
 

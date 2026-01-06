@@ -13,12 +13,12 @@ export default function Footer() {
                             <li><Link href="#features" className="text-gray-400 hover:text-white text-sm transition-colors">Features</Link></li>
                             <li><Link href="#pricing" className="text-gray-400 hover:text-white text-sm transition-colors">Pricing</Link></li>
                             <li>
-                              <DemoButton
-                                message="This is a demo site. Download functionality isn't available."
-                                className="text-gray-400 hover:text-white text-sm transition-colors"
-                              >
-                                Download
-                              </DemoButton>
+                                <DemoButton
+                                    message="This is a demo site. Download functionality isn't available."
+                                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                                >
+                                    Download
+                                </DemoButton>
                             </li>
                             <li><Link href="/docs/intro" className="text-gray-400 hover:text-white text-sm transition-colors">Documentation</Link></li>
                         </ul>
@@ -57,7 +57,7 @@ export default function Footer() {
                         <span className="text-gray-500 text-sm">© {new Date().getFullYear()}</span>
                     </div>
                     <p className="text-gray-500 text-sm">
-                        Manage your data with ease
+                        Manage Your Data with Ease
                     </p>
                 </div>
             </div>

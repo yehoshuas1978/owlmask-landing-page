@@ -4,7 +4,7 @@
 
 I've installed the Vercel CLI for you. Now follow these steps:
 
-### Step 1: Login to Vercel
+### Step 1: Login to Vercel!
 
 Run this command in your terminal:
 

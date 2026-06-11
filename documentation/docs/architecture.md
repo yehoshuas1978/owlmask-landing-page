@@ -44,4 +44,4 @@ This design ensures that OwlTable can be safely deployed in highly secure and re
 We are committed to supporting a wide range of database technologies.
 
 *   **Currently Supported:** PostgreSQL, MySQL, Db2, SQL Server.
-*   **Coming Soon (in V2):** MongoDB, Amazon RDS, Azure SQL Database, and other major cloud database platforms.
+*   **Coming Soon:** MongoDB, Amazon RDS, Azure SQL Database, and other major cloud database platforms.

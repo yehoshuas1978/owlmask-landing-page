@@ -2,13 +2,11 @@
 
 OwlTable is your all-in-one command center for database management. Our features are designed to give you unparalleled control, deep performance insights, and seamless integration into your development workflows.
 
-The product will be released in two releses V1, V2.
-
 ---
 
-## 🚀 V1 Features
+## 🚀 Free Tier Features
 
-V1 delivers a comprehensive suite of tools designed to streamline daily database operations, enhance performance, and protect your data.
+The Free tier delivers a comprehensive suite of tools designed to streamline daily database operations, enhance performance, and protect your data.
 
 ### 🚀 **Easy Installation: Get Started in Minutes**
 *   **Simple Setup:** The application is designed for simplicity. The UI is built into the application, requiring only a single installation to start running with no extra dependencies.
@@ -43,7 +41,7 @@ V1 delivers a comprehensive suite of tools designed to streamline daily database
 
 ---
 
-## ✨ V2 Features
+## ✨ Pro Tier Features
 
 These features expand OwlTable's capabilities to support more complex environments and provide advanced, proactive management tools for mission-critical systems.
 

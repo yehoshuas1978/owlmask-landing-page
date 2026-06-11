@@ -21,7 +21,7 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 mb-8 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        <span className="text-xs font-medium text-gray-300 tracking-wide">OwlTable V1 Available Now</span>
+                        <span className="text-xs font-medium text-gray-300 tracking-wide">OwlTable Available Now</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">

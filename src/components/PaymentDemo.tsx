@@ -16,10 +16,15 @@ export default function PaymentDemo() {
     }, []);
 
     return (
-        <section id="pricing" className="py-24 bg-[#19191c] border-t border-[#393b40]">
-            <div className="max-w-[1280px] mx-auto px-6">
+        <section id="pricing" className="py-24 bg-transparent border-t border-[#2a3142] relative overflow-hidden">
+            {/* Background Gradients */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[150px]" />
+            </div>
+
+            <div className="max-w-[1280px] mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-bold text-white mb-4">Transparent Pricing</h2>
+                    <h2 className="text-4xl font-bold text-white mb-4">Transparent Pricing</h2>
                     <p className="text-gray-400">Choose the plan that fits your team size and needs.</p>
                 </div>
 
@@ -27,13 +32,13 @@ export default function PaymentDemo() {
                     {loading ? (
                         // Loading Skeletons
                         [1, 2, 3].map((i) => (
-                            <div key={i} className="bg-[#2b2d30] p-8 rounded border border-[#393b40] animate-pulse">
-                                <div className="h-8 bg-[#393b40] rounded w-1/3 mb-4" />
-                                <div className="h-12 bg-[#393b40] rounded w-1/2 mb-8" />
+                            <div key={i} className="card animate-pulse">
+                                <div className="h-8 bg-[#2a3142] rounded w-1/3 mb-4" />
+                                <div className="h-12 bg-[#2a3142] rounded w-1/2 mb-8" />
                                 <div className="space-y-4">
-                                    <div className="h-4 bg-[#393b40] rounded w-full" />
-                                    <div className="h-4 bg-[#393b40] rounded w-full" />
-                                    <div className="h-4 bg-[#393b40] rounded w-2/3" />
+                                    <div className="h-4 bg-[#2a3142] rounded w-full" />
+                                    <div className="h-4 bg-[#2a3142] rounded w-full" />
+                                    <div className="h-4 bg-[#2a3142] rounded w-2/3" />
                                 </div>
                             </div>
                         ))
@@ -45,13 +50,13 @@ export default function PaymentDemo() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className={`relative bg-[#2b2d30] p-8 rounded border transition-all duration-300 flex flex-col ${plan.highlight
-                                    ? 'border-[#3574f0] shadow-[0_0_30px_rgba(53,116,240,0.15)] scale-105 z-10'
-                                    : 'border-[#393b40] hover:border-gray-500'
+                                className={`relative card flex flex-col ${plan.highlight
+                                    ? 'border-blue-500 shadow-glow scale-105 z-10'
+                                    : ''
                                     }`}
                             >
                                 {plan.highlight && (
-                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#3574f0] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                                         Most Popular
                                     </div>
                                 )}
@@ -69,7 +74,7 @@ export default function PaymentDemo() {
                                 <ul className="space-y-4 mb-8 flex-grow">
                                     {plan.features.map((feature, i) => (
                                         <li key={i} className="flex items-start text-gray-300 text-sm">
-                                            <Check className="w-4 h-4 text-[#3574f0] mr-3 mt-0.5 flex-shrink-0" />
+                                            <Check className={`w-4 h-4 mr-3 mt-0.5 flex-shrink-0 ${plan.highlight ? 'text-blue-400' : 'text-purple-400'}`} />
                                             <Tooltip text={feature.description}>
                                                 {feature.name}
                                             </Tooltip>
@@ -78,9 +83,9 @@ export default function PaymentDemo() {
                                 </ul>
 
                                 <button
-                                    className={`w-full py-3 font-medium rounded transition-colors ${plan.highlight
-                                        ? 'bg-[#3574f0] hover:bg-[#3065d2] text-white'
-                                        : 'bg-transparent border border-[#6e6e6e] hover:border-[#8c8c8c] text-white'
+                                    className={`w-full ${plan.highlight
+                                        ? 'btn-primary'
+                                        : 'btn-secondary'
                                         }`}
                                 >
                                     Get Started

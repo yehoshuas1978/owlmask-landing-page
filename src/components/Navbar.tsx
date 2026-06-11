@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Search, Menu } from 'lucide-react';
-import DemoButton from './DemoButton'; // Import the new DemoButton component
+import DemoButton from './DemoButton';
 
 export default function Navbar({ withMarginTop }: { withMarginTop?: boolean }) {
 
@@ -18,25 +18,25 @@ export default function Navbar({ withMarginTop }: { withMarginTop?: boolean }) {
                 alt="OwlTable Logo"
                 width={32}
                 height={32}
-                className="rounded-lg"
+                className="rounded-lg shadow-glow"
               />
-              OwlTable
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">OwlTable</span>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/#features" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+              <Link href="/#features" className="text-sm font-medium text-gray-400 hover:text-white hover:text-blue-400 transition-colors">
                 Features
               </Link>
-              <Link href="/#pricing" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+              <Link href="/#pricing" className="text-sm font-medium text-gray-400 hover:text-white hover:text-blue-400 transition-colors">
                 Pricing
               </Link>
-              <Link href="/docs/intro" className="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+              <Link href="/docs/intro" className="text-sm font-medium text-gray-400 hover:text-white hover:text-blue-400 transition-colors">
                 Documentation
               </Link>
             </div>
           </div>
 
           <div className="flex items-center gap-6">
-            <button className="text-gray-400 hover:text-white transition-colors">
+            <button className="text-gray-400 hover:text-blue-400 transition-colors">
               <Search size={18} />
             </button>
 

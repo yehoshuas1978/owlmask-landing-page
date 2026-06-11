@@ -26,13 +26,13 @@ export default function Hero() {
 
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-[1.1] tracking-tight">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
-                            Manage Your Data with Ease
+                            Provision Safe, Realistic Test Databases
                         </span>
                     </h1>
 
                     <p className="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
-                        A powerful, ergonomic environment for managing your data.
-                        Execute SQL, visualize tables, and boost developer productivity.
+                        Help teams create safe, realistic test environments from production data, 
+                        then validate and operate those workflows with built-in tools.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -84,30 +84,34 @@ export default function Hero() {
                                 {/* Main Area */}
                                 <div className="flex-1 p-4">
                                     <div className="flex gap-6 border-b border-white/5 pb-2 mb-4 text-xs font-medium uppercase tracking-wider text-gray-500">
-                                        <span className="text-blue-400 border-b-2 border-blue-400 pb-2 -mb-2.5">Query Editor</span>
-                                        <span>Table View</span>
-                                        <span>Diagram</span>
+                                        <span className="text-blue-400 border-b-2 border-blue-400 pb-2 -mb-2.5">Job Config</span>
+                                        <span>Data Preview</span>
+                                        <span>Schema Compare</span>
                                     </div>
 
                                     <div className="space-y-1 font-mono text-sm">
-                                        <div className="text-purple-400">SELECT <span className="text-white">*</span></div>
-                                        <div className="text-purple-400">FROM <span className="text-yellow-300">users</span></div>
-                                        <div className="text-purple-400">WHERE <span className="text-white">active = </span><span className="text-green-400">true</span></div>
-                                        <div className="text-purple-400">ORDER BY <span className="text-white">created_at DESC;</span></div>
+                                        <div className="text-blue-400">masking_strategy <span className="text-white">=</span> <span className="text-green-400">"users_prod"</span></div>
+                                        <div className="text-purple-400">APPLY <span className="text-white">Algorithm.FakeName()</span></div>
+                                        <div className="text-purple-400">TO <span className="text-yellow-300">users.first_name, users.last_name</span></div>
+                                        <div className="text-purple-400">WHERE <span className="text-white">role != </span><span className="text-green-400">'admin'</span></div>
                                     </div>
 
                                     <div className="mt-8 border border-white/5 rounded bg-[#141416]">
                                         <div className="grid grid-cols-4 gap-4 p-3 border-b border-white/5 text-xs text-gray-500 font-medium bg-white/5">
                                             <div>ID</div>
-                                            <div>NAME</div>
-                                            <div>EMAIL</div>
+                                            <div>NAME (MASKED)</div>
+                                            <div>EMAIL (MASKED)</div>
                                             <div>STATUS</div>
                                         </div>
-                                        {[1, 2, 3].map((i) => (
-                                            <div key={i} className="grid grid-cols-4 gap-4 p-3 text-xs text-gray-400 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
-                                                <div className="font-mono text-gray-600">{i}</div>
-                                                <div className="text-white">User {i}</div>
-                                                <div>user{i}@example.com</div>
+                                        {[
+                                            { id: 1, name: 'John Doe', email: 'j***@example.com' },
+                                            { id: 2, name: 'Jane Smith', email: 'j***@test.org' },
+                                            { id: 3, name: 'Bob Jones', email: 'b***@domain.net' }
+                                        ].map((row) => (
+                                            <div key={row.id} className="grid grid-cols-4 gap-4 p-3 text-xs text-gray-400 border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors">
+                                                <div className="font-mono text-gray-600">{row.id}</div>
+                                                <div className="text-white">{row.name}</div>
+                                                <div>{row.email}</div>
                                                 <div className="text-green-500">Active</div>
                                             </div>
                                         ))}

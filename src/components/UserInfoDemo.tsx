@@ -31,18 +31,18 @@ export default function UserInfoDemo() {
                 <div className="grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 className="text-3xl font-bold text-white mb-6">
-                            Deep Insight Into <br /> Your User Base
+                            Built-in Validation & <br /> Insights
                         </h2>
                         <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                            OwlTable provides a comprehensive view of your user data.
-                            Analyze patterns, manage permissions, and track activity in real-time.
+                            OwlTable provides a comprehensive view of your provisioning workflows.
+                            Compare source to target, run data validation queries, and inspect schemas safely.
                         </p>
 
                         <div className="space-y-6">
                             {[
-                                { title: 'Smart Analysis', desc: 'Automatically detect anomalies in user behavior.' },
-                                { title: 'Role Management', desc: 'Granular access control for every field.' },
-                                { title: 'Audit Logs', desc: 'Complete history of all data modifications.' }
+                                { title: 'Preflight Readiness', desc: 'Assess blockers and warnings before jobs run.' },
+                                { title: 'Data Compare', desc: 'Verify masked targets against source schemas.' },
+                                { title: 'Audit Logs', desc: 'Complete history of all provisioning executions.' }
                             ].map((item) => (
                                 <div key={item.title} className="flex gap-4">
                                     <div className="w-1 h-full min-h-[2rem] bg-blue-500/20 rounded-full relative">
@@ -64,7 +64,7 @@ export default function UserInfoDemo() {
                         className="bg-[#2b2d30] rounded border border-[#393b40] p-8 shadow-xl relative"
                     >
                         <div className="flex justify-between items-center mb-8 pb-4 border-b border-[#393b40]">
-                            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">User Profile</h3>
+                            <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider">Job Readiness</h3>
                             <button
                                 onClick={loadData}
                                 disabled={loading}
@@ -99,21 +99,21 @@ export default function UserInfoDemo() {
                                     <div className="p-4 bg-[#19191c] rounded border border-[#393b40] flex items-center gap-4">
                                         <Mail className="text-gray-500" size={18} />
                                         <div>
-                                            <div className="text-xs text-gray-500">Email</div>
+                                            <div className="text-xs text-gray-500">Source</div>
                                             <div className="text-sm text-gray-300">{userData.email}</div>
                                         </div>
                                     </div>
                                     <div className="p-4 bg-[#19191c] rounded border border-[#393b40] flex items-center gap-4">
                                         <Shield className="text-gray-500" size={18} />
                                         <div>
-                                            <div className="text-xs text-gray-500">Security</div>
+                                            <div className="text-xs text-gray-500">Strategy</div>
                                             <div className="text-sm text-gray-300">{userData.securityLevel}</div>
                                         </div>
                                     </div>
                                     <div className="p-4 bg-[#19191c] rounded border border-[#393b40] flex items-center gap-4">
                                         <Activity className="text-gray-500" size={18} />
                                         <div>
-                                            <div className="text-xs text-gray-500">Last Active</div>
+                                            <div className="text-xs text-gray-500">Last Executed</div>
                                             <div className="text-sm text-gray-300">{userData.lastActive}</div>
                                         </div>
                                     </div>

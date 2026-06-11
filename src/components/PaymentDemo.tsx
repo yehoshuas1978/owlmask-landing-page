@@ -91,7 +91,7 @@ export default function PaymentDemo() {
                 </div>
 
                 <div className="mt-12 text-center text-sm text-gray-500">
-                    <p>Enterprise plan also available at $30k–$80k/year per company. Contact sales for details.</p>
+                    <p>OwlTable can be deployed on-premise or in your private cloud.</p>
                 </div>
             </div>
         </section>

@@ -6,39 +6,39 @@ import { Database, Zap, Shield, Code, GitBranch, BarChart3 } from 'lucide-react'
 const features = [
     {
         icon: Database,
-        title: 'Multi-Database Support',
-        description: 'Connect to PostgreSQL, MySQL, SQL Server, and more. One powerful SQL client for all your database management needs.',
-        keywords: ['PostgreSQL client', 'MySQL management', 'SQL Server tool']
-    },
-    {
-        icon: Code,
-        title: 'Advanced SQL Editor',
-        description: 'Write and execute SQL queries with syntax highlighting, auto-completion, and intelligent suggestions. The ultimate database GUI for developers.',
-        keywords: ['SQL editor', 'query builder', 'database GUI']
-    },
-    {
-        icon: Zap,
-        title: 'Lightning Fast Performance',
-        description: 'Optimized for speed with efficient query execution and data visualization. Manage large datasets with ease.',
-        keywords: ['fast database tool', 'performance']
-    },
-    {
-        icon: Shield,
-        title: 'Secure Connections',
-        description: 'Enterprise-grade security with SSH tunneling, SSL/TLS encryption, and credential management.',
-        keywords: ['secure database', 'SSH tunnel', 'SSL']
+        title: 'Job-Based Provisioning',
+        description: 'Seamlessly provision safe, realistic test environments from source databases to target destinations.',
+        keywords: ['data provisioning', 'environment management', 'test databases']
     },
     {
         icon: GitBranch,
-        title: 'Version Control Integration',
-        description: 'Track schema changes, manage migrations, and collaborate with your team seamlessly.',
-        keywords: ['database migrations', 'schema management']
+        title: 'Column Strategy Engine',
+        description: 'Drive masking, subsetting, and synthetic generation from a single, shared classification layer configured once per schema.',
+        keywords: ['data classification', 'column strategy', 'schema management']
+    },
+    {
+        icon: Zap,
+        title: 'Data Masking & Subsetting',
+        description: 'Over 100+ masking algorithms and relational subsetting capabilities to generate realistic test data safely.',
+        keywords: ['data masking', 'data subsetting', 'synthetic data']
+    },
+    {
+        icon: Code,
+        title: 'Built-In Validation',
+        description: 'Validate outcomes with built-in Data Compare, Query, and Schema inspection tools without leaving the platform.',
+        keywords: ['data validation', 'schema compare', 'query tools']
     },
     {
         icon: BarChart3,
-        title: 'Data Visualization',
-        description: 'Transform your data into insights with built-in charts, graphs, and export capabilities.',
-        keywords: ['data visualization', 'database analytics']
+        title: 'Integrated Utilities',
+        description: 'Export/Import capabilities, advanced task scheduling, and real-time monitoring built into your everyday workflows.',
+        keywords: ['task scheduling', 'monitoring', 'export import']
+    },
+    {
+        icon: Shield,
+        title: 'Enterprise Security',
+        description: 'Field-level encryption, role-based access control (RBAC), and compliance support for GDPR, HIPAA, and PCI-DSS.',
+        keywords: ['RBAC', 'data security', 'compliance']
     }
 ];
 
@@ -62,12 +62,12 @@ export default function Features() {
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Powerful Features for{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
-                            Database Management
+                            Data Provisioning
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Everything you need in a modern database management tool and SQL client.
-                        Built for developers, DBAs, and data analysts.
+                        Everything you need to deliver high-quality, privacy-compliant test environments. 
+                        Built for data platform teams and developers.
                     </p>
                 </motion.div>
 

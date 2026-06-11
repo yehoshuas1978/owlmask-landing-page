@@ -6,27 +6,27 @@ import { Users, TrendingUp, Lock, Workflow } from 'lucide-react';
 const useCases = [
     {
         icon: Users,
-        title: 'Database Administrators',
-        description: 'Streamline database management with powerful tools for monitoring, optimization, and maintenance. Manage multiple PostgreSQL and MySQL servers from one interface.',
-        benefits: ['Multi-server management', 'Performance monitoring', 'Automated backups']
-    },
-    {
-        icon: TrendingUp,
-        title: 'Backend Developers',
-        description: 'Speed up development with an intuitive SQL editor and query builder. Debug queries, test schemas, and manage migrations effortlessly.',
-        benefits: ['Fast query execution', 'Schema visualization', 'Migration tools']
-    },
-    {
-        icon: Lock,
-        title: 'Data Analysts',
-        description: 'Extract insights from your databases with advanced filtering, sorting, and export capabilities. Visualize data without writing complex SQL.',
-        benefits: ['Visual query builder', 'Data export', 'Chart generation']
+        title: 'Data Platform Teams',
+        description: 'Provide self-serve, safe data environments to development teams. Enforce security standards across all environments with centrally managed masking rules.',
+        benefits: ['Centralized strategy', 'RBAC enforcement', 'Compliance']
     },
     {
         icon: Workflow,
-        title: 'DevOps Teams',
-        description: 'Integrate database operations into your CI/CD pipeline. Track schema changes, manage environments, and ensure data consistency.',
-        benefits: ['Version control', 'Environment management', 'Audit logs']
+        title: 'QA & Testing',
+        description: 'Generate reliable, production-like datasets for end-to-end testing. Use relational subsetting to capture all edge cases without bloated database sizes.',
+        benefits: ['Synthetic generation', 'Relational subsetting', 'Data validation']
+    },
+    {
+        icon: Lock,
+        title: 'Security & Compliance',
+        description: 'Ensure sensitive PII/PHI is completely anonymized before it ever leaves production. Automate masking strategies across entire schemas.',
+        benefits: ['Field-level encryption', '100+ algorithms', 'Readiness checks']
+    },
+    {
+        icon: TrendingUp,
+        title: 'Developers',
+        description: 'Quickly spin up isolated target databases filled with the exact subset of data needed for debugging. Execute queries and compare datasets effortlessly.',
+        benefits: ['Fast provisioning', 'Query tools', 'Data compare']
     }
 ];
 
@@ -53,7 +53,7 @@ export default function UseCases() {
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                        Whether you&apos;re a DBA, developer, or analyst, OwlTable adapts to your workflow.
+                        Whether you&apos;re building data platforms, testing applications, or securing infrastructure, OwlTable adapts to your workflow.
                     </p>
                 </motion.div>
 

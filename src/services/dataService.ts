@@ -27,33 +27,41 @@ const FAKE_USER_DATA: UserData = {
 
 const FAKE_PRICING_DATA: PricingPlan[] = [
     {
-        name: 'Team',
-        price: '$999',
-        period: '/month',
-        target: 'Data Platform & QA Teams',
+        name: 'Free',
+        price: '$0',
+        period: '/forever',
+        target: 'Individuals & Hobbyists',
         features: [
-            { name: '100+ Masking Algorithms', description: 'Access to a comprehensive library of masking functions for any data type.' },
-            { name: 'Relational Subsetting', description: 'Generate smaller, referentially intact database subsets for testing.' },
-            { name: 'Column Strategy Engine', description: 'Centrally manage classification and masking rules per schema.' },
-            { name: 'Built-in Validation', description: 'Data Compare and Query tools to verify masked targets.' },
-            { name: 'Job Scheduling', description: 'Automate data provisioning jobs to run on your schedule.' },
-            { name: 'Export & Import', description: 'Move data seamlessly between environments.' }
+            { name: 'Basic Masking', description: 'Access to standard masking functions.' },
+            { name: 'Local Connections', description: 'Connect to local source and target databases.' },
+            { name: 'Manual Execution', description: 'Execute provisioning jobs manually.' },
+            { name: 'Community Support', description: 'Access to community forums.' }
         ]
     },
     {
-        name: 'Enterprise',
-        price: 'Custom',
-        period: 'Contact Sales',
-        target: 'Large Organizations',
+        name: 'Pro Trial',
+        price: '$0',
+        period: '/for 14 days',
+        target: 'Teams Evaluating OwlTable',
         features: [
-            { name: 'Advanced Synthetic Data', description: 'AI-driven synthetic data generation for complex schemas.' },
-            { name: 'Field-level Encryption', description: 'Secure sensitive data at rest and in transit.' },
-            { name: 'Advanced RBAC', description: 'Granular access controls for enterprise teams.' },
-            { name: 'Compliance Support', description: 'Built-in reporting for GDPR, HIPAA, and PCI-DSS compliance.' },
-            { name: 'CI/CD Integration', description: 'API access for seamless integration into your deployment pipelines.' },
-            { name: 'Priority Support', description: '24/7 dedicated support team.' }
+            { name: 'All Pro Features', description: 'Full access to evaluate the platform.' },
+            { name: '100+ Masking Algorithms', description: 'Comprehensive library of masking functions.' },
+            { name: 'Relational Subsetting', description: 'Generate referentially intact subsets.' },
+            { name: 'Column Strategy Engine', description: 'Centrally manage classification and masking rules.' },
         ],
         highlight: true
+    },
+    {
+        name: 'Pro',
+        price: '$49',
+        period: '/user/month',
+        target: 'Early Adopters & Small Teams',
+        features: [
+            { name: 'Everything in Trial', description: 'Continuous access to all premium features.' },
+            { name: 'Job Scheduling', description: 'Automate data provisioning jobs to run on your schedule.' },
+            { name: 'Cloud Database Support', description: 'Connect to RDS, Azure SQL, and Cloud SQL.' },
+            { name: 'Priority Email Support', description: 'Direct access to the founding team.' }
+        ]
     }
 ];
 

@@ -23,7 +23,7 @@ export default function PaymentDemo() {
                     <p className="text-gray-400">Choose the plan that fits your team size and needs.</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {loading ? (
                         // Loading Skeletons
                         [1, 2, 3].map((i) => (

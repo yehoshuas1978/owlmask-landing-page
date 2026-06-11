@@ -36,21 +36,11 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                                    <DemoButton
-                                      message="This is a demo site. Download functionality isn't available."
-                                      className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold transition-colors flex items-center justify-center space-x-2"
-                                    >
-                                      <Download size={20} />
-                                      <span>Download Free Trial</span>
-                                    </DemoButton>                        <button className="btn-secondary flex items-center justify-center gap-2 text-lg px-8 py-4">
+                        <button className="btn-secondary flex items-center justify-center gap-2 text-lg px-8 py-4 mt-8">
                             <Terminal size={20} />
                             Release Notes
                         </button>
                     </div>
-                    <p className="mt-6 text-sm text-gray-500 flex items-center gap-2">
-                        <Check size={14} className="text-green-500" />
-                        Free 30-day trial. No credit card required.
-                    </p>
                 </motion.div>
 
                 <motion.div

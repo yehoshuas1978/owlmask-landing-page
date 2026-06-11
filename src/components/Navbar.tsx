@@ -42,18 +42,7 @@ export default function Navbar({ withMarginTop }: { withMarginTop?: boolean }) {
             <button className="text-gray-400 hover:text-white transition-colors">
               <Search size={18} />
             </button>
-            <Link
-              href="/login"
-              className="text-gray-400 hover:text-white text-sm font-medium transition-colors"
-            >
-              Log In
-            </Link>
-            <DemoButton
-              message="This is a demo site. Download functionality isn't available."
-              className="hidden md:block btn-primary text-sm"
-            >
-              Download
-            </DemoButton>
+
             <button className="md:hidden text-gray-300">
               <Menu size={24} />
             </button>

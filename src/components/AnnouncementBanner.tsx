@@ -13,7 +13,7 @@ export default function AnnouncementBanner({ isVisible, onClose }: { isVisible: 
                     <AlertCircle className="w-5 h-5 flex-shrink-0" />
                     <p className="text-sm md:text-base font-medium">
                         <span className="font-bold">Pre-Launch:</span> The OwlMask ecosystem is currently under development.
-                        Expected launch: Q1 2026. Join our waitlist to be notified!
+                        Expected launch: Q4 2026. Join our waitlist to be notified!
                     </p>
                 </div>
                 <button

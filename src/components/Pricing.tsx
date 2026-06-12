@@ -30,10 +30,10 @@ const ProductsAndPricing = () => {
                 <h3 className="text-3xl font-semibold text-white">OwlMask Core SDK</h3>
               </div>
               <p className="text-gray-300 text-lg mb-4">
-                <strong className="text-white">What it does:</strong> A lightweight Java/Next.js SDK to embed 100+ deterministic masking algorithms directly into your existing data pipelines.
+                <strong className="text-white">What it does:</strong> The core data masking engine, available as an embeddable SDK or via its built-in standalone UI. It includes 100+ deterministic masking algorithms.
               </p>
               <p className="text-gray-400">
-                <strong className="text-purple-400">The Advantage:</strong> Legacy competitors (like Delphix) require deploying heavy, expensive VMs. Our SDK runs instantly inside your CI/CD runners with zero infrastructure overhead.
+                <strong className="text-purple-400">The Advantage:</strong> Legacy competitors (like Delphix) require deploying heavy, expensive VMs. Our SDK runs instantly inside your environment with zero infrastructure overhead.
               </p>
             </div>
             <div className="md:w-72 bg-black/50 p-6 rounded-xl border border-white/5 text-center flex-shrink-0">
@@ -128,7 +128,7 @@ const ProductsAndPricing = () => {
                 <strong className="text-white">What it does:</strong> The entire ecosystem. You get the OwlTable Platform UI, the headless SDKs, the local LLMs, and the Autonomous Agent.
               </p>
               <p className="text-gray-400">
-                <strong className="text-white">The Advantage:</strong> Gives Data Platform teams a beautiful UI, while simultaneously giving Engineering teams the headless APIs they demand. One platform, total alignment.
+                <strong className="text-white">The Advantage:</strong> Gives Data Platform teams a powerful provisioning UI, while simultaneously giving Engineering teams the SDKs and autonomous agents they need. One platform, total alignment.
               </p>
             </div>
             <div className="md:w-72 bg-black/50 p-6 rounded-xl border border-white/5 text-center flex-shrink-0">

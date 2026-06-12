@@ -6,32 +6,32 @@ import { Database, Zap, Shield, Code, GitBranch, BarChart3, LockKeyhole, Search,
 const features = [
     {
         icon: Database,
-        title: 'Job-Based Provisioning',
-        description: 'Seamlessly provision safe, realistic test environments from source databases to target destinations.',
+        title: 'OwlTable Provisioning Suite',
+        description: 'A beautiful UI for DBAs to safely clone, subset, and mask databases without writing a single line of code.',
         className: 'md:col-span-2 md:row-span-2 glass-card p-8 bg-gradient-to-br from-blue-900/40 to-black/40',
         iconBg: 'bg-blue-500/20 text-blue-400',
         large: true
     },
     {
-        icon: GitBranch,
-        title: 'Column Strategy Engine',
-        description: 'Drive masking, subsetting, and synthetic generation from a single classification layer.',
+        icon: Code,
+        title: 'OwlMask Core SDK',
+        description: 'Headless Java/Next.js SDKs to integrate our 100+ deterministic masking algorithms into your CI/CD pipelines.',
         className: 'md:col-span-1 md:row-span-1 glass-card p-6 bg-black/40 hover:bg-[#1a1f2e]/60',
         iconBg: 'bg-purple-500/20 text-purple-400',
         large: false
     },
     {
         icon: Zap,
-        title: 'Masking & Subsetting',
-        description: 'Over 100+ algorithms and relational subsetting capabilities.',
+        title: 'OwlMask AI & LLMs',
+        description: 'Fine-tuned local LLMs capable of understanding context and generatively masking free-text columns safely.',
         className: 'md:col-span-1 md:row-span-1 glass-card p-6 bg-black/40 hover:bg-[#1a1f2e]/60',
         iconBg: 'bg-amber-500/20 text-amber-400',
         large: false
     },
     {
-        icon: Code,
-        title: 'Built-In Validation',
-        description: 'Validate outcomes with Data Compare and Query tools.',
+        icon: GitBranch,
+        title: 'Autonomous Coding Agent',
+        description: 'Let our AI agent automatically scan your schemas and write your masking configuration files for you.',
         className: 'md:col-span-1 md:row-span-1 glass-card p-6 bg-black/40 hover:bg-[#1a1f2e]/60',
         iconBg: 'bg-emerald-500/20 text-emerald-400',
         large: false
@@ -39,7 +39,7 @@ const features = [
     {
         icon: Shield,
         title: 'Enterprise Security',
-        description: 'Field-level encryption, RBAC, and full compliance support.',
+        description: 'Field-level encryption, RBAC, and full compliance support across the entire ecosystem.',
         className: 'md:col-span-2 md:row-span-1 glass-card p-6 bg-gradient-to-tr from-purple-900/20 to-black/40 hover:bg-[#1a1f2e]/80',
         iconBg: 'bg-rose-500/20 text-rose-400',
         large: false

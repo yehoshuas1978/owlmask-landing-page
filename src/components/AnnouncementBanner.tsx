@@ -12,7 +12,7 @@ export default function AnnouncementBanner({ isVisible, onClose }: { isVisible: 
                 <div className="flex items-center gap-3">
                     <AlertCircle className="w-5 h-5 flex-shrink-0" />
                     <p className="text-sm md:text-base font-medium">
-                        <span className="font-bold">Pre-Launch:</span> OwlTable is currently under development and not yet available.
+                        <span className="font-bold">Pre-Launch:</span> The OwlMask ecosystem is currently under development.
                         Expected launch: Q1 2026. Join our waitlist to be notified!
                     </p>
                 </div>

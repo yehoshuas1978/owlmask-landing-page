@@ -6,33 +6,33 @@ import { Users, TrendingUp, Lock, Workflow } from 'lucide-react';
 const useCases = [
     {
         icon: Users,
-        title: 'Data Platform Teams',
-        description: 'Provide self-serve, safe data environments to development teams. Enforce security standards across all environments with centrally managed masking rules.',
-        benefits: ['Centralized strategy', 'RBAC enforcement', 'Compliance'],
+        title: 'DBAs & Platform Teams',
+        description: 'Provide self-serve, safe data environments to development teams. Enforce security standards across all environments using the OwlTable Provisioning UI.',
+        benefits: ['Visual cloning workflow', 'RBAC enforcement', 'Compliance'],
         color: 'from-blue-500 to-indigo-600',
         dotColor: 'bg-blue-400'
     },
     {
-        icon: Workflow,
-        title: 'QA & Testing',
-        description: 'Generate reliable, production-like datasets for end-to-end testing. Use relational subsetting to capture all edge cases without bloated database sizes.',
-        benefits: ['Synthetic generation', 'Relational subsetting', 'Data validation'],
+        icon: TrendingUp,
+        title: 'Software Engineers',
+        description: 'Embed the OwlMask Core SDK directly into your data pipelines and Java/Next.js applications for headless, programmatic data masking.',
+        benefits: ['Headless API access', 'Custom integrations', 'High throughput'],
         color: 'from-purple-500 to-pink-600',
         dotColor: 'bg-purple-400'
     },
     {
         icon: Lock,
-        title: 'Security & Compliance',
-        description: 'Ensure sensitive PII/PHI is completely anonymized before it ever leaves production. Automate masking strategies across entire schemas.',
-        benefits: ['Field-level encryption', '100+ algorithms', 'Readiness checks'],
+        title: 'Security & AI Teams',
+        description: 'Leverage our fine-tuned local LLMs to perform generative masking on unstructured free-text columns without sending data to OpenAI.',
+        benefits: ['Local execution', 'Generative context', 'PHI/PII detection'],
         color: 'from-emerald-500 to-teal-600',
         dotColor: 'bg-emerald-400'
     },
     {
-        icon: TrendingUp,
-        title: 'Developers',
-        description: 'Quickly spin up isolated target databases filled with the exact subset of data needed for debugging. Execute queries and compare datasets effortlessly.',
-        benefits: ['Fast provisioning', 'Query tools', 'Data compare'],
+        icon: Workflow,
+        title: 'DevOps & Automation',
+        description: 'Let the Autonomous Coding Agent scan your CI/CD databases and automatically generate and test the YAML masking configuration files.',
+        benefits: ['Zero-touch config', 'Schema discovery', 'Automated testing'],
         color: 'from-amber-500 to-orange-600',
         dotColor: 'bg-amber-400'
     }
@@ -61,7 +61,7 @@ export default function UseCases() {
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light">
-                        Whether you&apos;re building data platforms, testing applications, or securing infrastructure, OwlTable adapts to your workflow.
+                        Whether you want the full OwlTable UI experience or prefer embedding the headless OwlMask SDKs, we adapt to your workflow.
                     </p>
                 </motion.div>
 

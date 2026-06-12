@@ -53,11 +53,11 @@ export default function Footer() {
 
                 <div className="border-t border-[#27272a] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="flex items-center gap-2">
-                        <span className="text-xl font-bold text-white tracking-tight">OwlTable</span>
+                        <span className="text-xl font-bold text-white tracking-tight">OwlMask</span>
                         <span className="text-gray-500 text-sm">© {new Date().getFullYear()}</span>
                     </div>
                     <p className="text-gray-500 text-sm">
-                        Manage Your Data with Ease
+                        The autonomous data masking ecosystem.
                     </p>
                 </div>
             </div>

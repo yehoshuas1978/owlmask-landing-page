@@ -49,20 +49,18 @@ export default function Hero() {
                     <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 border border-blue-500/30 rounded-full bg-blue-500/10 backdrop-blur-md shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                         <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-ping absolute opacity-75" />
                         <span className="w-2.5 h-2.5 rounded-full bg-blue-400 relative" />
-                        <span className="text-sm font-semibold text-blue-200 tracking-wide">OwlTable 1.0 is Live</span>
+                        <span className="text-sm font-semibold text-blue-200 tracking-wide">OwlMask 1.0 is Live</span>
                     </div>
 
                     <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
-                        Provision <br/>
+                        Secure Data <br/>
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 animate-gradient-x">
-                            Realistic Test
+                            For the AI Era
                         </span>
-                        <br/>
-                        Databases
                     </h1>
 
                     <p className="text-xl text-gray-300/90 mb-10 max-w-lg leading-relaxed font-light">
-                        Help teams create safe, realistic test environments from production data. Transform sensitive records into compliant datasets in seconds.
+                        The complete ecosystem for generative data masking. From a powerful UI for DBAs to headless SDKs for Engineering teams.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-5">

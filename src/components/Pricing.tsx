@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Shield, Code, Zap, GitBranch, Database, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -80,6 +80,27 @@ const PRICING_DATA = [
 const ProductsAndPricing = () => {
   const [selectedProduct, setSelectedProduct] = useState<typeof PRICING_DATA[0] | null>(null);
 
+  // Sync modal state with browser history (Back button support)
+  useEffect(() => {
+    const handlePopState = () => {
+      setSelectedProduct(null);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleOpenDetails = (product: typeof PRICING_DATA[0]) => {
+    window.history.pushState({ modalOpen: true }, '');
+    setSelectedProduct(product);
+  };
+
+  const handleCloseDetails = () => {
+    if (window.history.state?.modalOpen) {
+      window.history.back();
+    }
+    setSelectedProduct(null);
+  };
+
   return (
     <section className="py-24 bg-black relative overflow-hidden" id="pricing">
       <div className="absolute inset-0 pointer-events-none">
@@ -99,14 +120,14 @@ const ProductsAndPricing = () => {
         {/* Top Grid: Developer Track (3 columns) */}
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           {PRICING_DATA.slice(0, 3).map((product) => (
-            <PricingCard key={product.id} product={product} onViewDetails={() => setSelectedProduct(product)} />
+            <PricingCard key={product.id} product={product} onViewDetails={() => handleOpenDetails(product)} />
           ))}
         </div>
 
         {/* Bottom Grid: Platform Track (2 columns centered) */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {PRICING_DATA.slice(3, 5).map((product) => (
-            <PricingCard key={product.id} product={product} onViewDetails={() => setSelectedProduct(product)} />
+            <PricingCard key={product.id} product={product} onViewDetails={() => handleOpenDetails(product)} />
           ))}
         </div>
 
@@ -142,7 +163,7 @@ const ProductsAndPricing = () => {
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }} 
               exit={{ opacity: 0 }} 
-              onClick={() => setSelectedProduct(null)}
+              onClick={handleCloseDetails}
               className="absolute inset-0 bg-black/80 backdrop-blur-sm"
             />
             <motion.div 
@@ -152,7 +173,7 @@ const ProductsAndPricing = () => {
               className="relative w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl p-8 z-10"
             >
               <button 
-                onClick={() => setSelectedProduct(null)}
+                onClick={handleCloseDetails}
                 className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
               >
                 <X className="w-6 h-6" />

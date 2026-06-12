@@ -4,7 +4,38 @@ import React, { useState, useEffect } from 'react';
 import { Shield, Code, Zap, GitBranch, Database, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const PRICING_DATA = [
+const PLATFORM_DATA = [
+  {
+    id: 'provisioning',
+    name: 'OwlTable Provisioning UI',
+    icon: Database,
+    price: '$299',
+    period: '/ month',
+    note: 'Per Installation',
+    colorClass: 'text-blue-400',
+    borderClass: 'border-blue-500/50',
+    bgClass: 'bg-blue-600',
+    badge: 'MOST POPULAR',
+    whatItDoes: 'A beautiful, enterprise-grade web UI allowing DBAs to safely clone, subset, and mask databases without writing a single line of code. Includes the Core SDK engine under the hood.',
+    advantage: 'Combines advanced relational subsetting with masking in a single, easy-to-use platform that costs 80% less than legacy enterprise tools.'
+  },
+  {
+    id: 'ultimate',
+    name: 'OwlMask Ultimate Suite',
+    icon: Shield,
+    price: '$499',
+    period: '/ month',
+    note: 'Per Installation',
+    colorClass: 'text-white',
+    borderClass: 'border-white/20',
+    bgClass: 'bg-white text-black',
+    badge: 'COMPLETE ECOSYSTEM',
+    whatItDoes: 'The entire ecosystem. You get the OwlTable Platform UI for your DBAs, plus the headless SDKs, local LLMs, and Autonomous Agents for your Engineering teams.',
+    advantage: 'One unified platform. Gives Data Platform teams a powerful provisioning UI, while simultaneously giving Engineering teams total automation autonomy.'
+  }
+];
+
+const DEVELOPER_DATA = [
   {
     id: 'sdk',
     name: 'Core SDK',
@@ -14,8 +45,7 @@ const PRICING_DATA = [
     note: 'Per Installation',
     colorClass: 'text-purple-400',
     borderClass: 'border-purple-500/30',
-    bgClass: 'bg-purple-500/10',
-    popular: false,
+    btnClass: 'bg-purple-500/10 text-purple-400 hover:bg-purple-500/20',
     whatItDoes: 'The core data masking engine, available as an embeddable SDK or via its built-in standalone UI. It includes 100+ deterministic masking algorithms.',
     advantage: 'Legacy competitors (like Delphix) require deploying heavy, expensive VMs. Our SDK runs instantly inside your environment with zero infrastructure overhead.'
   },
@@ -28,8 +58,7 @@ const PRICING_DATA = [
     note: 'Per Installation',
     colorClass: 'text-amber-400',
     borderClass: 'border-amber-500/30',
-    bgClass: 'bg-amber-500/10',
-    popular: true,
+    btnClass: 'bg-amber-500/10 text-amber-400 hover:bg-amber-500/20',
     whatItDoes: 'The Core SDK bundled with our fine-tuned, local generative LLMs for intelligently masking unstructured free-text columns.',
     advantage: 'Competing AI masking tools send your sensitive data to OpenAI. Our LLM runs 100% locally on your hardware. Your PII never leaves your VPC.'
   },
@@ -42,43 +71,14 @@ const PRICING_DATA = [
     note: 'Per Installation',
     colorClass: 'text-emerald-400',
     borderClass: 'border-emerald-500/30',
-    bgClass: 'bg-emerald-500/10',
-    popular: false,
+    btnClass: 'bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20',
     whatItDoes: 'An AI agent that automatically scans your database schemas, detects sensitive columns, and writes the YAML masking configurations for you.',
     advantage: 'Eliminates the hundreds of hours DBAs spend manually mapping columns. It does the mapping in minutes, completely autonomously.'
-  },
-  {
-    id: 'provisioning',
-    name: 'Provisioning UI',
-    icon: Database,
-    price: '$299',
-    period: '/ month',
-    note: 'Per Installation',
-    colorClass: 'text-blue-400',
-    borderClass: 'border-blue-500/30',
-    bgClass: 'bg-blue-500/10',
-    popular: false,
-    whatItDoes: 'A beautiful, enterprise-grade web UI allowing DBAs to safely clone, subset, and mask databases without writing a single line of code. (Includes Core SDK engine).',
-    advantage: 'Combines advanced relational subsetting with masking in a single, easy-to-use platform that costs 80% less than legacy enterprise tools.'
-  },
-  {
-    id: 'ultimate',
-    name: 'Ultimate Suite',
-    icon: Shield,
-    price: '$499',
-    period: '/ month',
-    note: 'Per Installation',
-    colorClass: 'text-white',
-    borderClass: 'border-white/30',
-    bgClass: 'bg-white/10',
-    popular: false,
-    whatItDoes: 'The entire ecosystem. You get the OwlTable Platform UI, the headless SDKs, the local LLMs, and the Autonomous Agent.',
-    advantage: 'Gives Data Platform teams a powerful provisioning UI, while simultaneously giving Engineering teams the SDKs and autonomous agents they need. One platform, total alignment.'
   }
 ];
 
 const ProductsAndPricing = () => {
-  const [selectedProduct, setSelectedProduct] = useState<typeof PRICING_DATA[0] | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<typeof DEVELOPER_DATA[0] | null>(null);
 
   // Sync modal state with browser history (Back button support)
   useEffect(() => {
@@ -89,7 +89,7 @@ const ProductsAndPricing = () => {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  const handleOpenDetails = (product: typeof PRICING_DATA[0]) => {
+  const handleOpenDetails = (product: typeof DEVELOPER_DATA[0]) => {
     window.history.pushState({ modalOpen: true }, '');
     setSelectedProduct(product);
   };
@@ -104,7 +104,7 @@ const ProductsAndPricing = () => {
   return (
     <section className="py-24 bg-black relative overflow-hidden" id="pricing">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[150px] mix-blend-screen" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] mix-blend-screen" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -117,18 +117,93 @@ const ProductsAndPricing = () => {
           </p>
         </div>
 
-        {/* Top Grid: Developer Track (3 columns) */}
-        <div className="grid md:grid-cols-3 gap-6 mb-6">
-          {PRICING_DATA.slice(0, 3).map((product) => (
-            <PricingCard key={product.id} product={product} onViewDetails={() => handleOpenDetails(product)} />
-          ))}
+        {/* FEATURED: The Platforms */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <Database className="w-6 h-6 text-blue-400" />
+            The Core Platforms
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            {PLATFORM_DATA.map((platform) => (
+              <div key={platform.id} className={`bg-zinc-900/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 border ${platform.borderClass} flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1`}>
+                <div className={`absolute top-0 right-0 ${platform.id === 'provisioning' ? 'bg-blue-500' : 'bg-white'} ${platform.id === 'provisioning' ? 'text-white' : 'text-black'} text-xs font-bold px-4 py-1.5 rounded-bl-lg`}>
+                  {platform.badge}
+                </div>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <platform.icon className={`w-10 h-10 ${platform.colorClass}`} />
+                  <h3 className="text-3xl font-bold text-white">{platform.name}</h3>
+                </div>
+
+                <div className="flex-grow space-y-6 mb-8">
+                  <div>
+                    <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">What it does</h4>
+                    <p className="text-gray-300 text-lg">{platform.whatItDoes}</p>
+                  </div>
+                  <div>
+                    <h4 className={`text-sm font-bold uppercase tracking-wider mb-2 ${platform.colorClass}`}>The Advantage</h4>
+                    <p className="text-gray-400 text-lg">{platform.advantage}</p>
+                  </div>
+                </div>
+
+                <div className="mt-auto pt-6 border-t border-zinc-800 flex items-end justify-between">
+                  <div>
+                    <span className="text-5xl font-extrabold text-white">{platform.price}</span>
+                    <span className="text-gray-500 font-medium ml-2">{platform.period}</span>
+                    <div className="text-gray-500 text-sm mt-1">{platform.note}</div>
+                  </div>
+                  <a 
+                    href={`mailto:founder@owlmask.com?subject=${encodeURIComponent(platform.name)}%20Trial`} 
+                    className={`px-8 py-4 rounded-xl font-bold transition-all hover:scale-[1.02] ${platform.id === 'provisioning' ? 'bg-blue-600 hover:bg-blue-500 text-white shadow-[0_0_20px_rgba(37,99,235,0.3)]' : 'bg-white hover:bg-gray-200 text-black'}`}
+                  >
+                    Request Trial
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom Grid: Platform Track (2 columns centered) */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {PRICING_DATA.slice(3, 5).map((product) => (
-            <PricingCard key={product.id} product={product} onViewDetails={() => handleOpenDetails(product)} />
-          ))}
+        {/* SECONDARY: Developer Tools Grid */}
+        <div>
+          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <Code className="w-6 h-6 text-purple-400" />
+            Developer & AI Tools
+            <span className="text-sm font-normal text-gray-500 ml-2">(Standalone Add-ons)</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            {DEVELOPER_DATA.map((product) => (
+              <div key={product.id} className={`bg-zinc-900/50 backdrop-blur-sm rounded-xl shadow-lg p-6 border ${product.borderClass} flex flex-col relative transition-colors hover:bg-zinc-900/80`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <product.icon className={`w-6 h-6 ${product.colorClass}`} />
+                  <h4 className="text-xl font-semibold text-white">{product.name}</h4>
+                </div>
+                
+                <div className="mb-6 flex-grow">
+                  <p className="text-gray-400 line-clamp-2 mb-3 text-sm">{product.whatItDoes}</p>
+                  <button 
+                    onClick={() => handleOpenDetails(product)}
+                    className={`text-sm font-semibold hover:underline ${product.colorClass}`}
+                  >
+                    View details &rarr;
+                  </button>
+                </div>
+
+                <div className="mt-auto pt-5 border-t border-zinc-800/50 flex items-center justify-between">
+                  <div>
+                    <span className="text-2xl font-bold text-white">{product.price}</span>
+                    <span className="text-gray-500 text-xs ml-1">{product.period}</span>
+                  </div>
+                  <a 
+                    href={`mailto:founder@owlmask.com?subject=${encodeURIComponent(product.name)}%20Trial`} 
+                    className={`px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-transparent ${product.btnClass}`}
+                  >
+                    Trial
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* How It Works Footer */}
@@ -155,7 +230,7 @@ const ProductsAndPricing = () => {
         </div>
       </div>
 
-      {/* Details Modal */}
+      {/* Details Modal (Only for Developer Tools now) */}
       <AnimatePresence>
         {selectedProduct && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
@@ -202,7 +277,7 @@ const ProductsAndPricing = () => {
                 </div>
                 <a 
                   href={`mailto:founder@owlmask.com?subject=${encodeURIComponent(selectedProduct.name)}%20Trial`} 
-                  className={`px-6 py-3 rounded-lg font-bold transition-colors ${selectedProduct.bgClass} ${selectedProduct.colorClass} border ${selectedProduct.borderClass} hover:bg-white hover:text-black`}
+                  className={`px-6 py-3 rounded-lg font-bold transition-colors ${selectedProduct.colorClass} border ${selectedProduct.borderClass} ${selectedProduct.btnClass.replace('text-', '')} hover:bg-white hover:text-black`}
                 >
                   Request 30-Day Trial
                 </a>
@@ -212,44 +287,6 @@ const ProductsAndPricing = () => {
         )}
       </AnimatePresence>
     </section>
-  );
-};
-
-const PricingCard = ({ product, onViewDetails }: { product: typeof PRICING_DATA[0], onViewDetails: () => void }) => {
-  return (
-    <div className={`bg-zinc-900/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border ${product.borderClass} flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1`}>
-      {product.popular && (
-        <div className="absolute top-0 right-0 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-      )}
-      <div className="flex items-center gap-3 mb-6">
-        <product.icon className={`w-8 h-8 ${product.colorClass}`} />
-        <h3 className="text-2xl font-semibold text-white">{product.name}</h3>
-      </div>
-      
-      <div className="mb-6 flex-grow">
-        <p className="text-gray-400 line-clamp-3 mb-4">{product.whatItDoes}</p>
-        <button 
-          onClick={onViewDetails}
-          className={`text-sm font-semibold hover:underline ${product.colorClass}`}
-        >
-          View full details &rarr;
-        </button>
-      </div>
-
-      <div className="mt-auto pt-6 border-t border-zinc-800/50">
-        <div className="mb-4">
-          <span className="text-4xl font-extrabold text-white">{product.price}</span>
-          <span className="text-gray-500 font-medium text-sm ml-1">{product.period}</span>
-          <div className="text-gray-600 text-xs mt-1">{product.note}</div>
-        </div>
-        <a 
-          href={`mailto:founder@owlmask.com?subject=${encodeURIComponent(product.name)}%20Trial`} 
-          className="block w-full text-center bg-zinc-800 border border-transparent rounded-lg py-3 px-4 text-white font-medium hover:bg-zinc-700 transition-colors"
-        >
-          Request Trial
-        </a>
-      </div>
-    </div>
   );
 };
 

@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import UserInfoDemo from '@/components/UserInfoDemo';
-import PaymentDemo from '@/components/PaymentDemo';
 import AnnouncementBanner from '@/components/AnnouncementBanner';
 import ProductsAndPricing from '@/components/Pricing';
 
@@ -17,8 +15,6 @@ export default function Home() {
       <AnnouncementBanner isVisible={isBannerVisible} onClose={() => setIsBannerVisible(false)} />
       <Navbar withMarginTop={isBannerVisible} />
       <Hero />
-      <UserInfoDemo />
-      <PaymentDemo />
       <ProductsAndPricing />
       
 

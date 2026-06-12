@@ -23,7 +23,7 @@ const PLATFORM_DATA = [
     id: 'ultimate',
     name: 'OwlMask Ultimate Suite',
     icon: Shield,
-    price: '$499',
+    price: '$399',
     period: '/ month',
     note: 'Per Installation',
     colorClass: 'text-white',

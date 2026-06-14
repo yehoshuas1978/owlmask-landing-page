@@ -1,6 +1,6 @@
 # Deploying to Vercel
 
-This guide explains how to deploy the OwlTable landing page to Vercel.
+This guide explains how to deploy the OwlMask landing page to Vercel.
 
 ## Prerequisites
 

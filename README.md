@@ -1,10 +1,10 @@
-# OwlTable Landing Page
+# OwlMask Landing Page
 
-The marketing and landing page for the OwlTable and OwlMask ecosystem. It showcases the features, value proposition, and documentation links for the data provisioning platform.
+The marketing and landing page for the OwlMask ecosystem. It showcases the features, value proposition, and documentation links for the data provisioning platform.
 
 ## What it does
 
-- Presents the OwlTable platform to users and potential customers.
+- Presents the OwlMask platform to users and potential customers.
 - Highlights core features: Data Masking, Subsetting, Synthetic Data, and Validation.
 - Provides deployment guides, pricing information, and documentation links.
 

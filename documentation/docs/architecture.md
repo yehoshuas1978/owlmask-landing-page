@@ -1,19 +1,19 @@
 # Architecture & Data Privacy by Design
 
-At OwlTable, we believe that world-class tools should not require compromising on security. Our architecture is built on a fundamental principle: **your data is yours, and it should never leave your control.**
+At OwlMask, we believe that world-class tools should not require compromising on security. Our architecture is built on a fundamental principle: **your data is yours, and it should never leave your control.**
 
 ---
 
 ## Secure Client-Server Model
 
-OwlTable operates on a hybrid client-server model that guarantees data privacy. All sensitive operations occur within your own network, and our servers are only used for non-sensitive administrative tasks.
+OwlMask operates on a hybrid client-server model that guarantees data privacy. All sensitive operations occur within your own network, and our servers are only used for non-sensitive administrative tasks.
 
 ```
 +-------------------------------------------------+
 |               Your Network Environment          |
 |                                                 |
 |  +-----------------+      +------------------+  |
-|  |   OwlTable      |----->|  Your Databases  |  |
+|  |   OwlMask      |----->|  Your Databases  |  |
 |  |  (Client App)   |      | (PostgreSQL,     |  |
 |  +-----------------+      |  MySQL, etc.)    |  |
 |        ^                  +------------------+  |
@@ -24,18 +24,18 @@ OwlTable operates on a hybrid client-server model that guarantees data privacy. 
 +--------|----------------------------------------+
 |        v                                        |
 |  +-----------------+                              |
-|  | OwlTable Server |                              |
+|  | OwlMask Server |                              |
 |  | (Our Cloud)     |                              |
 |  +-----------------+                              |
 |                                                 |
 +-------------------------------------------------+
 ```
 
-*   **The OwlTable Client:** This is the core application that you install and run **on your own servers**. It connects directly to your databases to perform all management, monitoring, and analysis tasks.
-    It is important to note that **OwlTable runs as a web application, not a desktop application**. This design choice provides significant advantages, including seamless deployment in Docker containers or headless server environments. For clients who primarily operate with desktop-only applications, OwlTable offers a modern, flexible alternative that enhances accessibility and integration within diverse IT infrastructures.
+*   **The OwlMask Client:** This is the core application that you install and run **on your own servers**. It connects directly to your databases to perform all management, monitoring, and analysis tasks.
+    It is important to note that **OwlMask runs as a web application, not a desktop application**. This design choice provides significant advantages, including seamless deployment in Docker containers or headless server environments. For clients who primarily operate with desktop-only applications, OwlMask offers a modern, flexible alternative that enhances accessibility and integration within diverse IT infrastructures.
 *   **Our Cloud Services:** Our servers are **only** used for license validation and to provide secure downloads of the application. **We never have access to your database credentials, schema, or data.**
 
-This design ensures that OwlTable can be safely deployed in highly secure and regulated environments.
+This design ensures that OwlMask can be safely deployed in highly secure and regulated environments.
 
 ---
 

@@ -1,6 +1,6 @@
-# 🦉 OwlTable Product Features
+# 🦉 OwlMask Product Features
 
-OwlTable is your all-in-one command center for database management. Our features are designed to give you unparalleled control, deep performance insights, and seamless integration into your development workflows.
+OwlMask is your all-in-one command center for database management. Our features are designed to give you unparalleled control, deep performance insights, and seamless integration into your development workflows.
 
 ---
 
@@ -29,7 +29,7 @@ The Free tier delivers a comprehensive suite of tools designed to streamline dai
 
 ### ⚙️ **Automation: Automate Tedious Tasks**
 *   **Simplify Backups:** Schedule and automate database backups to ensure your data is always protected without manual intervention.
-*   **Integrate with CI/CD:** Connect OwlTable to your existing CI/CD pipelines (e.g., Jenkins, GitLab CI) to fully automate your database deployment and management processes.
+*   **Integrate with CI/CD:** Connect OwlMask to your existing CI/CD pipelines (e.g., Jenkins, GitLab CI) to fully automate your database deployment and management processes.
 
 ### 🖱️ **Visual Tools: Work Smarter**
 *   **Edit Data on the Fly:** Visually browse and edit data directly within a query result set (up to 500 records).
@@ -43,7 +43,7 @@ The Free tier delivers a comprehensive suite of tools designed to streamline dai
 
 ## ✨ Pro Tier Features
 
-These features expand OwlTable's capabilities to support more complex environments and provide advanced, proactive management tools for mission-critical systems.
+These features expand OwlMask's capabilities to support more complex environments and provide advanced, proactive management tools for mission-critical systems.
 
 ### 🌐 **Expanded Compatibility: Connect to Any Database**
 *   **NoSQL Support:** Introducing support for MongoDB.
@@ -51,7 +51,7 @@ These features expand OwlTable's capabilities to support more complex environmen
 
 ### 🚨 **Proactive Diagnostics: Find Issues Before They Happen**
 *   **Smart Alerts:** Receive predictive alerts for critical issues, such as running out of disk space, before they impact your services.
-*   **Automated Root Cause Analysis:** Move beyond alerts to diagnosis. OwlTable will automatically identify the root cause of performance problems, saving you hours of troubleshooting.
+*   **Automated Root Cause Analysis:** Move beyond alerts to diagnosis. OwlMask will automatically identify the root cause of performance problems, saving you hours of troubleshooting.
 
 ### 🔁 **Advanced Versioning: Total Control Over Your Database**
 *   **Full Database Versioning:** Treat your entire database as a versioned artifact, enabling complex deployment and rollback strategies.

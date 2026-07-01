@@ -2,6 +2,8 @@
   "name": "owlmask-landing-page",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
+  "author": "Yehoshua Zev Susswein <yehoshuas1978@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
